@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-[#172554] flex flex-col font-sans selection:bg-[#d4af37] selection:text-white">
-      {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-50">
+      {/* Floating Action Button */}
+      <div className="absolute top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-8 flex justify-end">
           <Link
             href="/support"
@@ -14,7 +14,8 @@ export default function Home() {
             Get in touch
           </Link>
         </div>
-      </nav>
+      </div>
+
 
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden bg-white">
@@ -266,59 +267,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Creative Section: The Sonko Mural */}
-      <section className="py-32 px-6 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
-          {/* Background Branding */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-[#172554]/[0.02] tracking-tighter whitespace-nowrap select-none">
-            SONKOREEEE
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
-            {/* Mural Card 1 */}
-            <div className="md:col-span-8 bg-[#172554] rounded-[3rem] p-12 text-white overflow-hidden relative group h-[500px]">
-              <div className="absolute inset-0 opacity-40">
-                <Image src="/leader_four.png" alt="Leadership" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="relative z-10 h-full flex flex-col justify-end">
-                <p className="text-[#d4af37] font-black uppercase tracking-widest text-xs mb-4">Core Philosophy</p>
-                <h3 className="text-5xl font-black uppercase tracking-tighter leading-none max-w-md">Driven By<br />The People's<br />Pulse</h3>
-              </div>
-            </div>
-
-            {/* Mural Card 2 */}
-            <div className="md:col-span-4 bg-[#d4af37] rounded-[3rem] p-12 text-white flex flex-col justify-between group h-[500px]">
-              <div className="w-16 h-1 w-full bg-white/20" />
-              <div className="space-y-6">
-                <h3 className="text-4xl font-black uppercase tracking-tighter leading-[0.8]">The<br />Rescue<br />Spirit</h3>
-                <p className="text-sm font-medium opacity-80 leading-relaxed italic">"When systems fail, humanity must prevail. We are the bridge to service."</p>
-              </div>
-            </div>
-
-            {/* Mural Card 3 */}
-            <div className="md:col-span-4 border-2 border-[#172554]/5 rounded-[3rem] p-8 flex items-center justify-center bg-gray-50/50 h-[300px]">
-               <div className="text-center">
-                  <span className="block text-6xl font-black text-[#172554]">100%</span>
-                  <p className="text-[10px] uppercase font-bold tracking-[0.4em] text-[#d4af37]">Commitment to Action</p>
-               </div>
-            </div>
-
-            {/* Mural Card 4 */}
-            <div className="md:col-span-8 bg-white border border-gray-100 rounded-[3rem] overflow-hidden relative group h-[300px]">
-              <Image src="/leader_two.png" alt="Strategic Vision" fill className="object-cover opacity-20 grayscale group-hover:grayscale-0 transition-all duration-700" />
-              <div className="absolute inset-0 flex items-center p-12">
-                <h3 className="text-4xl font-black text-[#172554] uppercase tracking-tighter">Strategic<br />Integrity</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Luxury Coachline - Rolls-Royce Style */}
+      <div className="w-full flex justify-center py-4 bg-white">
+        <div className="w-full max-w-7xl h-0.5 bg-[#d4af37] opacity-60 rounded-full mx-6 shadow-[0_0_10px_rgba(212,175,55,0.2)]" />
+      </div>
 
       {/* Footer */}
-      <footer className="py-20 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] uppercase font-bold tracking-[0.5em] opacity-50">&copy; {new Date().getFullYear()} Mike Sonko.</p>
-          <p className="text-xs font-black uppercase tracking-widest text-[#d4af37]">Power to the People</p>
+      <footer className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <p className="text-[10px] uppercase font-bold tracking-[0.5em] opacity-30">&copy; {new Date().getFullYear()} Mike Sonko.</p>
+            <p className="text-xs font-black uppercase tracking-widest text-[#d4af37]">Power to the People</p>
+          </div>
+          
+          {/* Social Handles */}
+          <div className="flex items-center gap-8">
+            <Link href="https://web.facebook.com/MikeSonkoTV" target="_blank" className="opacity-40 hover:opacity-100 transition-opacity">
+              <svg className="w-5 h-5 fill-[#172554]" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </Link>
+            <Link href="https://x.com/MikeSonko" target="_blank" className="opacity-40 hover:opacity-100 transition-opacity">
+              <svg className="w-5 h-5 fill-[#172554]" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </Link>
+            <Link href="https://www.tiktok.com/@mike.sonko.tv" target="_blank" className="opacity-40 hover:opacity-100 transition-opacity">
+              <svg className="w-5 h-5 fill-[#172554]" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.03 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.84.2-.76.38-1.4 1.05-1.69 1.83-.45.89-.37 2.09.2 2.91.64.91 1.82 1.39 2.92 1.27 1.25-.13 2.37-.96 2.82-2.13.14-.38.21-.78.21-1.18V.02z"/></svg>
+            </Link>
+            <Link href="https://www.youtube.com/@mikesonkoofficial" target="_blank" className="opacity-40 hover:opacity-100 transition-opacity">
+              <svg className="w-5 h-5 fill-[#172554]" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </Link>
+          </div>
         </div>
       </footer>
     </div>
